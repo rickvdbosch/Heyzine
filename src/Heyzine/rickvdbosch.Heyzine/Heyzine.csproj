@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/rickvdbosch/Heyzine</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageVersion>1.1.0.0</PackageVersion>
+    <PackageVersion>1.2.0.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
