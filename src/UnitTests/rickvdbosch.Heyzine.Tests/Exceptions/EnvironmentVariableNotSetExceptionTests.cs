@@ -6,7 +6,7 @@ public class EnvironmentVariableNotSetExceptionTests
 {
     #region Constants
 
-    const string defaultExceptionMessage = "Exception of type 'rickvdbosch.Heyzine.Exceptions.EnvironmentVariableNotSetException' was thrown.";
+    const string defaultExceptionMessage = "Exception of type 'RvdB.Heyzine.Exceptions.EnvironmentVariableNotSetException' was thrown.";
     const string variableName = "HeyzineTestVariable";
 
     Exception innerException = new("Inner exception");
