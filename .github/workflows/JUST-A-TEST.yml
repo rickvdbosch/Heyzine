@@ -1,0 +1,28 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Use shared and env-specific secrets
+        run: |
+          echo "Shared: ${{ secrets.SHARED_SECRET }}"
+          echo "Env: ${{ secrets.ENV_SPECIFIC_SECRET }}"
+
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Use shared and env-specific secrets
+        run: |
+          echo "Shared: ${{ secrets.SHARED_SECRET }}"
+          echo "Env: ${{ secrets.ENV_SPECIFIC_SECRET }}"
