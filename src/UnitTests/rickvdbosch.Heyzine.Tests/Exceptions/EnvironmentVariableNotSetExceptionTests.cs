@@ -7,7 +7,6 @@ public class EnvironmentVariableNotSetExceptionTests
     #region Constants
 
     const string defaultExceptionMessage = "Exception of type 'rickvdbosch.Heyzine.Exceptions.EnvironmentVariableNotSetException' was thrown.";
-    const string defaultCustomExceptionMessage = "This is the default exception message.";
     const string variableName = "HeyzineTestVariable";
 
     Exception innerException = new("Inner exception");
@@ -26,7 +25,7 @@ public class EnvironmentVariableNotSetExceptionTests
     }
 
     [Fact]
-    public void ConstructorWithValidVariableName_ShouldInitializeException()
+    public void Constructor_WhenValidVariableName_ShouldInitializeException()
     {
         var exception = new EnvironmentVariableNotSetException(variableName);
 
@@ -36,13 +35,23 @@ public class EnvironmentVariableNotSetExceptionTests
     }
 
     [Fact]
-    public void ConstructorWithMessageAndInnerException_ShouldInitializeException()
+    public void Constructor_WhenVariableNameNull_ShouldThrowArgumentNullException()
     {
-        var exception = new EnvironmentVariableNotSetException(defaultCustomExceptionMessage, innerException);
+        string? variableName = null;
+
+        var exception = Assert.Throws<ArgumentNullException>(() => new EnvironmentVariableNotSetException(variableName));
+
+        Assert.Equal("variableName", exception.ParamName);
+    }
+
+    [Fact]
+    public void Constructor_WhenValidMessageAndInnerException_ShouldInitializeException()
+    {
+        var exception = new EnvironmentVariableNotSetException(variableName, innerException);
 
         Assert.NotNull(exception);
         Assert.IsType<EnvironmentVariableNotSetException>(exception);
-        Assert.Equal(defaultCustomExceptionMessage, exception.Message);
+        Assert.Equal(string.Format(Constants.ERRORS_ENVVAR_NOTSET, variableName), exception.Message);
         Assert.Equal(innerException, exception.InnerException);
     }
 }
