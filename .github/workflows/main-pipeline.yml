@@ -24,4 +24,4 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release --no-restore
     - name: Push
-      run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_APIKEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push src/Heyzine/rickvdbosch.Heyzine/bin/Release/*.nupkg -k ${{ secrets.NUGET_APIKEY }} -s https://api.nuget.org/v3/index.json
