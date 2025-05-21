@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace rickvdbosch.Heyzine.Exceptions;
+namespace RvdB.Heyzine.Exceptions;
 
 public class EnvironmentVariableNotSetException : Exception
 {

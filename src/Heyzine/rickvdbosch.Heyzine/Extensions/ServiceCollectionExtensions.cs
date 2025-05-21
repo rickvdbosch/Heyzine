@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace rickvdbosch.Heyzine.Extensions;
+namespace RvdB.Heyzine.Extensions;
 
 public static class ServiceCollectionExtensions
 {

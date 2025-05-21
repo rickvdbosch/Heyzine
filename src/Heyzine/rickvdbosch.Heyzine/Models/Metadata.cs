@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace rickvdbosch.Heyzine.Models;
+namespace RvdB.Heyzine.Models;
 
 public class Metadata
 {

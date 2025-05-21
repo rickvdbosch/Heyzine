@@ -4,8 +4,8 @@ using System.Text.Json;
 using Moq;
 using Moq.Protected;
 
-using rickvdbosch.Heyzine.Exceptions;
-using rickvdbosch.Heyzine.Models;
+using RvdB.Heyzine.Exceptions;
+using RvdB.Heyzine.Models;
 
 namespace rickvdbosch.Heyzine.Tests;
 

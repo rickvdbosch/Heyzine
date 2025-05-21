@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
+    <Using Include="RvdB.Heyzine"/>
   </ItemGroup>
 
 </Project>

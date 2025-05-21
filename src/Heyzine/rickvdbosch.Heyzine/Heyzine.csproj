@@ -23,7 +23,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Using Include="rickvdbosch.Heyzine.Models" />
+		<Using Include="RvdB.Heyzine.Models" />
 	</ItemGroup>
 
   <ItemGroup>

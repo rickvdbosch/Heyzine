@@ -1,8 +1,8 @@
 ﻿using System.Net.Http.Json;
 
-using rickvdbosch.Heyzine.Exceptions;
+using RvdB.Heyzine.Exceptions;
 
-namespace rickvdbosch.Heyzine;
+namespace RvdB.Heyzine;
 
 public class HeyzineRestClient : IHeyzineRestClient
 {

@@ -1,4 +1,4 @@
-﻿namespace rickvdbosch.Heyzine;
+﻿namespace RvdB.Heyzine;
 
 public interface IHeyzineRestClient
 {

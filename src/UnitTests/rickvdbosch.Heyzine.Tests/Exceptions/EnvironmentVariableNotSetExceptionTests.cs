@@ -1,4 +1,4 @@
-﻿using rickvdbosch.Heyzine.Exceptions;
+﻿using RvdB.Heyzine.Exceptions;
 
 namespace rickvdbosch.Heyzine.Tests.Exceptions;
 
