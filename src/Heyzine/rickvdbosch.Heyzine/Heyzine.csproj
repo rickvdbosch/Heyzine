@@ -4,6 +4,15 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>RvdB.$(AssemblyName)</PackageId>
+    <Title>Heyzine</Title>
+    <Authors>Rick van den Bosch</Authors>
+    <Description>This package enables you to interact with the Heyzine API.</Description>
+    <Copyright>Copyright © 2025 - Rick van den Bosch</Copyright>
+    <PackageProjectUrl>https://github.com/rickvdbosch/Heyzine</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rickvdbosch/Heyzine</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +26,13 @@
 
   <ItemGroup>
     <InternalsVisibleTo Include="rickvdbosch.Heyzine.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
