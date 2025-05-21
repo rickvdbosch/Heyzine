@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\HeyZine\rickvdbosch.HeyZine\Heyzine.csproj" />
+    <ProjectReference Include="..\..\Heyzine\rickvdbosch.Heyzine\Heyzine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
