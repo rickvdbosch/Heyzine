@@ -17,6 +17,7 @@ public class HeyzineRestClient : IHeyzineRestClient
 
     public HeyzineRestClient(IHttpClientFactory httpClientFactory)
     {
+        ArgumentNullException.ThrowIfNull(httpClientFactory, nameof(httpClientFactory));
         var clientId = Environment.GetEnvironmentVariable(Constants.CLIENTID_SETTINGNAME);
         if (string.IsNullOrEmpty(clientId))
         { 

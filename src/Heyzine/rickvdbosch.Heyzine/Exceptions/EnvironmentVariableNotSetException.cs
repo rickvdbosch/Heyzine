@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace rickvdbosch.Heyzine.Exceptions;
 
 public class EnvironmentVariableNotSetException : Exception
@@ -7,12 +9,13 @@ public class EnvironmentVariableNotSetException : Exception
     }
 
     public EnvironmentVariableNotSetException(string variableName)
-        : base($"Environment variable {variableName} has not been configured correctly.")
+        : base(string.Format(Constants.ERRORS_ENVVAR_NOTSET, variableName))
     {
+        ArgumentNullException.ThrowIfNull(variableName, nameof(variableName));
     }
 
-    public EnvironmentVariableNotSetException(string message, Exception innerException)
-        : base(message, innerException)
+    public EnvironmentVariableNotSetException(string variableName, Exception innerException)
+        : base(string.Format(Constants.ERRORS_ENVVAR_NOTSET, variableName), innerException)
     {
     }
 }
