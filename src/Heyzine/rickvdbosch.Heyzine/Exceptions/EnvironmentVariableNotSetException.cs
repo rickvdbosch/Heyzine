@@ -15,5 +15,6 @@ public class EnvironmentVariableNotSetException : Exception
     public EnvironmentVariableNotSetException(string variableName, Exception innerException)
         : base(string.Format(Constants.ERRORS_ENVVAR_NOTSET, variableName), innerException)
     {
+        ArgumentNullException.ThrowIfNull(variableName, nameof(variableName));
     }
 }
